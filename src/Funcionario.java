@@ -1,9 +1,7 @@
 public class Funcionario extends Pessoa {
-    // Atributos
     private int numCracha;
     private double salario;
 
-    // Construtor
     public Funcionario() {}
 
     public Funcionario(String nome, String cpf, int numCracha, double salario) {
@@ -12,7 +10,6 @@ public class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
-    // Getters e Setters
     public int getNumCracha() {
         return numCracha;
     }
@@ -29,16 +26,12 @@ public class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
-    // Métodos
     public void bonificar() {
-        double bonus = salario * 0.10;
-        salario += bonus;
+        this.salario *= 1.10; // Bonificação de 10%
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                "numero do cracha: " + getNumCracha() +
-                "salario: " + getSalario();
+        return super.toString() + " Funcionario{" + "numCracha=" + numCracha + ", salario=" + salario + '}';
     }
 }

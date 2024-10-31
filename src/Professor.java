@@ -33,9 +33,12 @@ public class Professor extends Funcionario {
     }
 
     @Override
+    public void bonificar() {
+        this.setSalario(this.getSalario() * 2); // Bonificação de 100%
+    }
+
+    @Override
     public String toString() {
-        return super.toString() +
-                "url: " + getUrlattes() +
-                "disciplina: " + getDisciplinas();
+        return super.toString() + " Professor{" + "urlattes='" + urlattes + '\'' + ", disciplinas=" + disciplinas + '}';
     }
 }

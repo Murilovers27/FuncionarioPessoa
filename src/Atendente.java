@@ -10,14 +10,6 @@ public class Atendente extends Funcionario {
         this.setor = setor;
     }
 
-    public String getSetor() {
-        return setor;
-    }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
-    }
-
     public String getFuncao() {
         return funcao;
     }
@@ -26,16 +18,21 @@ public class Atendente extends Funcionario {
         this.funcao = funcao;
     }
 
+    public String getSetor() {
+        return setor;
+    }
+
+    public void setSetor(String setor) {
+        this.setor = setor;
+    }
+
     @Override
     public void bonificar() {
-        super.bonificar();
+        this.setSalario(this.getSalario() * 1.15); // Bonificação de 15%
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                " Atendente{" +
-                "setor='" + getSetor()  +
-                ", funcao='" + getFuncao();
+        return super.toString() + " Atendente{" + "funcao='" + funcao + '\'' + ", setor='" + setor + '\'' + '}';
     }
 }
